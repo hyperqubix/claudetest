@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voxel Ant Simulator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <div id="canvas-container"></div>
+
+  <div id="hud" class="panel">
+    <h2>Ant Simulator</h2>
+    <div class="stat">
+      <span class="label">Ants</span>
+      <span class="value" id="stat-ants">0</span>
+    </div>
+    <div class="stat">
+      <span class="label">Food on ground</span>
+      <span class="value" id="stat-food-ground">0</span>
+    </div>
+    <div class="stat">
+      <span class="label">Food collected</span>
+      <span class="value" id="stat-food-collected">0</span>
+    </div>
+  </div>
+
+  <div id="legend" class="panel">
+    <div class="legend-item">
+      <div class="swatch" style="background:#FFD700"></div>Nest
+    </div>
+    <div class="legend-item">
+      <div class="swatch" style="background:#FF3333"></div>Food
+    </div>
+    <div class="legend-item">
+      <div class="swatch" style="background:#1a1a1a; border:1px solid #555"></div>Ant (foraging)
+    </div>
+    <div class="legend-item">
+      <div class="swatch" style="background:#FF8C00"></div>Ant (carrying food)
+    </div>
+  </div>
+
+  <div id="hint" class="panel">
+    Drag to orbit &nbsp;·&nbsp; Scroll to zoom
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
